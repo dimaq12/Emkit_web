@@ -1,4 +1,5 @@
 const express = require('express');
+const i18n = require('i18n-2');
 const session = require('express-session');
 const mongoose = require('mongoose');
 const MongoStore = require('connect-mongo')(session);
@@ -33,6 +34,30 @@ app.use(expressValidator());
 // populates req.cookies with any cookies that came along with the request
 app.use(cookieParser());
 
+// -----------------Locale section--------------------------
+// Attach the i18n property to the express request object
+// And attach helper methods for use in templates
+i18n.expressBind(app, {
+  // setup some locales - other locales default to en silently
+  locales: ['ru', 'en'],
+  defaultLocale: 'ru',
+  // change the cookie name from 'lang' to 'locale'
+  cookieName: 'locale'
+});
+
+app.use(function(req, res, next) {
+  if (req.cookies.locale === undefined) {
+    // console.log('There is no cookie');
+    res.cookie('locale', 'ru');
+    req.i18n.setLocale('ru');
+  } else {
+    // console.log(`the current locale is ${req.cookies.locale}`);
+  };  
+  req.i18n.setLocaleFromCookie();
+  next();
+});
+// -------------------------------------------------------------
+
 // Sessions allow us to store data on visitors from request to request
 // This keeps users logged in and allows us to send flash messages
 app.use(session({
@@ -40,7 +65,8 @@ app.use(session({
   key: process.env.KEY,
   resave: false,
   saveUninitialized: false,
-  store: new MongoStore({ mongooseConnection: mongoose.connection })
+  store: new MongoStore({ mongooseConnection: mongoose.connection }),
+  cookie: { maxAge: 60000 }
 }));
 
 // // Passport JS is what we use to handle our logins
@@ -56,6 +82,21 @@ app.use((req, res, next) => {
   res.locals.flashes = req.flash();
   res.locals.user = req.user || null;
   res.locals.currentPath = req.path;
+  next();
+});
+
+// pass menu here because in helpers it's not updating on each page request
+app.use((req, res, next) => {
+  res.locals.m = [
+    { slug: '/stores', title: req.i18n.__("items"), icon: 'store', },
+    { slug: '/tags', title: req.i18n.__("categories"), icon: 'tag', },
+    { slug: '/top', title: req.i18n.__("top"), icon: 'top', },
+    { slug: '/add', title: req.i18n.__("add"), icon: 'add', },
+  ];
+  res.locals.siteName = req.i18n.__("siteName");
+  res.locals.reg = req.i18n.__("register");
+  res.locals.log = req.i18n.__("login");
+  res.locals.searchPlaceholder = req.i18n.__("searchPlaceholder");
   next();
 });
 
