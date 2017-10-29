@@ -1,0 +1,18 @@
+mixin itemForm(item = {})
+	form(action=`/add/${item._id || ''}` method='POST' class='card' enctype="multipart/form-data")
+		label(for='name') #{__('Name')}
+		input(type='text' name='name' value=item.name)
+		label(for='description') #{__('Description')}
+		textarea(name='description')= item.description
+		label(for='photo') #{__('Photo')}
+			input(type='file' name='photo' id='photo' accept='image/gif, image/jpeg, image/png, image/jpg')
+			if item.photo
+				img(src=`/uploads/${item.photo}`, alt=item.name width=200)
+		- const choices = [__('AdapterBoardsSO'), __('AdapterBoardsSSOP'), __('AdaptersForBreadBoard'), __('QFNAdapters')] 
+		- const categories = item.categories || []
+		ul.categories
+			each choice in choices
+				.category.category__choice
+					input(type='checkbox' id=choice value=choice name='categories' checked=(categories.includes(choice)))
+					label(for=choice) #{choice}
+		input(type='submit' value=__('save') class='button')

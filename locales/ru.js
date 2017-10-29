@@ -8,5 +8,14 @@
 	"add": "Добавить",
 	"register": "Регистрация",
 	"login": "Войти",
-	"searchPlaceholder": "Переходник, адаптер..."
+	"searchPlaceholder": "Переходник, адаптер...",
+	"Add_Item": "Добавить",
+	"AdapterBoardsSO": "Переходники SO",
+	"AdapterBoardsSSOP": "Переходники SSOP",
+	"AdaptersForBreadBoard": "Переходники для BreadBoard",
+	"QFNAdapters": "QFN-переходники",
+	"Name": "Название",
+	"Description": "Описание",
+	"Photo": "Фото",
+	"save": "Сохранить"
 }

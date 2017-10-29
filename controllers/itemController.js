@@ -5,6 +5,10 @@ exports.getItems = (req, res) => {
     });
 }
 
+exports.addItem = (req, res) => {
+	res.render('editItem', { title: req.i18n.__('Add_Item')});
+}
+
 exports.switchToEn = (req, res) => {
     res.cookie('locale', 'en');
     res.redirect('/');

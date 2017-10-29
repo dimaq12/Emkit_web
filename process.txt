@@ -1,0 +1,3 @@
+- create item model
+- define item schema
+- create add item form

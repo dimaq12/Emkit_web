@@ -7,4 +7,6 @@ router.get('/', itemController.getItems);
 router.get('/en', itemController.switchToEn);
 router.get('/ru', itemController.switchToRu);
 
+router.get('/add', itemController.addItem);
+
 module.exports = router;
