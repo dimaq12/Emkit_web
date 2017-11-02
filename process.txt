@@ -1,3 +1,8 @@
 - create item model
 - define item schema
-- create add item form
+- create "add item" form (edit item)
+- create "createItem" route in the controller that saves an item to the database
+- create "getItems" route
+- create items.pug template
+- create "itemCard" mixin
+- create "editItem" route in the controller

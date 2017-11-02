@@ -6,14 +6,19 @@ const itemSchema = new mongoose.Schema({
   name: {
 		type: String,
 		trim: true,
-		required: 'Please enter an item name!'
+		required: 'Пожалуйта, введите название!'
 	},
 	slug: String,
 	description: {
 		type: String,
 		trim: true,
 	},
-	categories: [String]
+	categories: [String],
+	created: {
+		type: Date,
+		default: Date.now
+	},
+	photo: String
 	
 });
 

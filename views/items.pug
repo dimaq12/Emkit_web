@@ -1,0 +1,11 @@
+extends layout
+include mixins/_itemCard
+//- include mixins/_pagination
+
+block content
+	.inner
+		h2= title
+		.items
+			each item in items
+				+itemCard(item)
+		//- +pagination(page, pages, count)
