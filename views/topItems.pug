@@ -1,0 +1,21 @@
+extends layout
+
+block content
+  .inner
+    h2 Топ #{items.length} переходников
+    table.table
+      thead
+        td Фото
+        td Оценка
+        td Название
+        td Отзывы
+        td Средний рейтинг
+      each item, i in items
+        tr
+          td
+            a(href=`/item/${item.slug}`)
+              img(width=200 src=`/uploads/${item.photo || 'item.png'}` alt=item.name)
+          td #{i + 1}
+          td: a(href=`/item/${item.slug}`)= item.name
+          td= item.reviews.length
+          td #{Math.round(item.averageRating * 10) / 10} / 5

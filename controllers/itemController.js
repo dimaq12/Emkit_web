@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 const Item = mongoose.model('Item');
-// const User = mongoose.model('User');
+const User = mongoose.model('User');
 const multer = require('multer');
 const jimp = require('jimp');
 const uuid = require('uuid');
@@ -47,24 +47,23 @@ exports.createItem = async (req, res) => {
 }
 
 exports.getItems = async (req, res) => {
-    // const page = req.params.page || 1;
-	// const limit = 4;
-	// const skip = (page * limit) - limit;
-	// const itemsPromise = Item
-	// 	.find()
-	// 	.skip(skip)
-	// 	.limit(limit)
-	// 	.sort({created: 'desc' });
-	// const countPromise = Store.count();
-	// const [stores, count] = await Promise.all([storesPromise, countPromise]);
-	// const pages = Math.ceil(count / limit);
-	// if(!stores.length && skip){
-	// 	req.flash('info', `Hey, you asked for page ${page}, but it doesnt exist. So, you go to page ${pages}`);
-	// 	res.redirect(`/stores/page/${pages}`);
-	// 	return;
-    // }
-    const items = await Item.find();
-    res.render('items', { title: 'Все переходники', items});
+  const page = req.params.page || 1;
+	const limit = 6;
+	const skip = (page * limit) - limit;
+	const itemsPromise = Item
+		.find()
+		.skip(skip)
+		.limit(limit)
+		.sort({created: 'desc' });
+	const countPromise = Item.count();
+	const [items, count] = await Promise.all([itemsPromise, countPromise]);
+	const pages = Math.ceil(count / limit);
+	if(!items.length && skip){
+		req.flash('info', `Эй, вы перешли на страницу ${page}, а ее нет! Поэтому мы вас направим к странице ${pages}`);
+		res.redirect(`/items/page/${pages}`);
+		return;
+    }
+	res.render('items', { title: 'Все переходники', items, page, pages});
 }
 
 const confirmOwner = (item, user) => {
@@ -118,3 +117,27 @@ exports.searchItems = async (req, res) => {
 	}).limit(5)
 	res.json(items)
 }
+
+exports.heartItem = async (req, res) => {
+	const hearts = req.user.hearts.map(obj => obj.toString());
+	const operator = hearts.includes(req.params.id) ? '$pull' : '$addToSet';
+	const user = await User
+		.findByIdAndUpdate(req.user._id,
+		{ [operator]: { hearts: req.params.id }},
+		{ new: true}
+	)
+	res.json(user);
+}
+
+exports.getHearts = async (req, res) => {
+	const items = await Item.find({
+		_id: { $in: req.user.hearts }
+	});
+	res.render('items', { title: 'Популярные элементы', items });
+}
+
+exports.getTopItems = async (req, res) => {
+	const items = await Item.getTopItems();
+	res.render('topItems', { items, title:'Топ'})
+}
+

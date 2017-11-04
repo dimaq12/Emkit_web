@@ -1,14 +1,25 @@
 mixin itemCard(item = {})
-  .item
-    .item__hero
-      .item__actions
-        if user && item.author.equals(user._id)
-          .item__action.item__action--edit
-            a(href=`/items/${item._id}/edit`)
-              != h.icon('pencil')
-      img(src=`/uploads/${item.photo || 'item.png'}`)
-      h2.title
-        a(href=`/item/${item.slug}`) #{item.name}
-    .item__details
-      p= item.description.split(' ').slice(0, 25).join(' ')
+	.item
+		.item__hero
+			.item__actions
+				if user
+					.item__action.item__action--heart
+						form.heart(method="POST" action=`/api/items/${item._id}/heart`)
+							- const heartStrings = user.hearts.map(obj => obj.toString())
+							- const heartClass = heartStrings.includes(item._id.toString()) ? 'heart__button--hearted' : ''
+							button.heart__button(type="submit" name="heart" class=heartClass)
+								!= h.icon('heart')
+				if user && item.author.equals(user._id)
+					.item__action.item__action--edit
+						a(href=`/items/${item._id}/edit`)
+							!= h.icon('pencil')
+				if item.reviews 
+					.item__action.item__action--count
+						!= h.icon('review')
+						span= item.reviews.length			
+			img(src=`/uploads/${item.photo || 'item.png'}`)
+			h2.title
+				a(href=`/item/${item.slug}`) #{item.name}
+		.item__details
+			p= item.description.split(' ').slice(0, 25).join(' ')
 

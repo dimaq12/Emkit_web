@@ -55,4 +55,36 @@ itemSchema.statics.getCategoriesList = function(){
 	])
 }
 
+itemSchema.statics.getTopItems = function(){
+	return this.aggregate([
+		{ $lookup: { from: 'reviews', localField: '_id', foreignField: 'item', as: 'reviews'}},
+		{ $match: { 'reviews.1': { $exists: true }}},
+		{ $project: {
+			photo: '$$ROOT.photo',
+			name: '$$ROOT.name',
+			reviews: '$$ROOT.reviews',
+			slug: '$$ROOT.slug',
+			averageRating: { $avg: '$reviews.rating'}
+		}},
+		{ $sort: { averageRating: -1 }},
+		{ $limit: 10 }
+	]);
+}
+
+itemSchema.virtual('reviews', {
+	ref: 'Review',
+	localField: '_id',
+	foreignField: 'item'
+});
+
+function autopopulate(next){
+	this.populate('reviews');
+	next();
+}
+
+itemSchema.pre('find', autopopulate);
+itemSchema.pre('findOne', autopopulate);
+
+
+
 module.exports = mongoose.model('Item', itemSchema);

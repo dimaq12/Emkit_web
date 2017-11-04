@@ -1,0 +1,10 @@
+mixin reviewForm(item)
+  form.reviewer(action=`/reviews/${item._id}` method="POST")
+    textarea(name="text" placeholder="У вас уже есть такая вещь? Ну и как она вам? Оставьте отзыв...")
+    .reviewer__meta
+      .reviewer__stars
+        each num in [5,4,3,2,1]
+          input(type="radio" required id=`star${num}` name="rating" value=num)
+          label(for=`star${num}`) #{num} Звезды
+      input.button(type="submit" value="Оставить отзыв→")
+

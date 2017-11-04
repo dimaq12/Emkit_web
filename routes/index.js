@@ -3,11 +3,13 @@ const router = express.Router();
 const itemController = require('../controllers/itemController');
 const userController = require('../controllers/userController');
 const authController = require('../controllers/authController');
+const reviewController = require('../controllers/reviewController');
 const {catchErrors} = require('../handlers/errorHandlers');
 
 // Do work here
 router.get('/', catchErrors(itemController.getItems));
 router.get('/items', catchErrors(itemController.getItems));
+router.get('/items/page/:page', catchErrors(itemController.getItems));
 router.get('/add', authController.isLoggedIn, itemController.addItem);
 router.post('/add', 
   itemController.upload,
@@ -42,9 +44,16 @@ router.post('/account', catchErrors(userController.updateAccount));
 router.post('/account/forgot', catchErrors(authController.forgot));
 
 // API
-
 router.get('/api/search', catchErrors(itemController.searchItems));
-// router.get('/api/items/near', catchErrors(storeController.mapStores));
 router.post('/api/items/:id/heart', catchErrors(itemController.heartItem));
+
+// Hearts
+router.get('/hearts', authController.isLoggedIn, catchErrors(itemController.getHearts));
+
+// Reviews
+router.post('/reviews/:id', authController.isLoggedIn, catchErrors(reviewController.addReview));
+
+// TOP
+router.get('/top', catchErrors(itemController.getTopItems));
 
 module.exports = router;

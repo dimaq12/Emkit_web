@@ -1,6 +1,6 @@
 extends layout
 include mixins/_itemCard
-//- include mixins/_pagination
+include mixins/_pagination
 
 block content
 	.inner
@@ -8,4 +8,4 @@ block content
 		.items
 			each item in items
 				+itemCard(item)
-		//- +pagination(page, pages, count)
+		+pagination(page, pages, count)
