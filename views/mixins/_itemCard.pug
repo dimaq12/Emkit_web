@@ -2,9 +2,10 @@ mixin itemCard(item = {})
   .item
     .item__hero
       .item__actions
-        .item__action.item__action--edit
-          a(href=`/items/${item._id}/edit`)
-            != h.icon('pencil')
+        if user && item.author.equals(user._id)
+          .item__action.item__action--edit
+            a(href=`/items/${item._id}/edit`)
+              != h.icon('pencil')
       img(src=`/uploads/${item.photo || 'item.png'}`)
       h2.title
         a(href=`/item/${item.slug}`) #{item.name}

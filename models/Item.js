@@ -18,8 +18,19 @@ const itemSchema = new mongoose.Schema({
 		type: Date,
 		default: Date.now
 	},
-	photo: String
+	photo: String,
+	author: {
+		type: mongoose.Schema.ObjectId,
+		ref: 'Item',
+		required: 'Вы должны добавить автора!'
+	}
 	
+});
+
+// Indexes
+itemSchema.index({
+	name: 'text',
+	description: 'text'
 });
 
 itemSchema.pre('save', async function(next){

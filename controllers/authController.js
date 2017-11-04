@@ -7,14 +7,14 @@ const mail = require('../handlers/mail');
 
 exports.login = passport.authenticate('local', {
 	failureRedirect: '/login',
-	failureFlash: 'Failed login!',
+	failureFlash: 'Войти неполучилось!',
 	successRedirect: '/',
-	successFlash: 'You are now logged in!'
+	successFlash: 'Залогинились отлично, так держать!'
 });
 
 exports.logout = (req, res) => {
 	req.logout();
-	req.flash('success', 'You are now logged out!');
+	req.flash('success', 'Разлогинились без проблем. Заходите еще!');
 	res.redirect('/');
 }
 
@@ -23,27 +23,27 @@ exports.isLoggedIn = (req, res, next) => {
 		next();
 		return;
 	}
-	req.flash('error', 'Oopps! You must be logged in!');
+	req.flash('error', 'Опа! А надо-бы залогиниться!');
 	res.redirect('/login');
 }
 
 exports.forgot = async (req, res) => {
 	const user = await User.findOne({ email: req.body.email});
 	if(!user){
-		req.flash('error', 'No account with that email exists!');
+		req.flash('error', 'Да нету аккаунта с таким email-ом!');
 		return res.redirect('/login');
 	}
 	user.resetPasswordToken = crypto.randomBytes(20).toString('hex');
 	user.resetPasswordExpires = Date.now() + 3600000;
 	await user.save();
 	const resetURL = `http://${req.headers.host}/account/reset/${user.resetPasswordToken}`;
-	await mail.send({
-		user,
-		filename: 'password-reset',
-		subject: 'Password Reset',
-		resetURL
-	});
-	req.flash('success', `You have been emailed a password reset link.`);
+	// await mail.send({
+	// 	user,
+	// 	filename: 'password-reset',
+	// 	subject: 'Сброс пароля',
+	// 	resetURL
+	// });
+	req.flash('success', `Вам на почту отправили ссылку для сброса пароля.`);
 	res.redirect('/login');
 }
 
@@ -53,10 +53,10 @@ exports.reset = async (req, res) => {
 		resetPasswordExpires: { $gt: Date.now()}
 	});
 	if(!user) {
-		req.flash('error', 'Password reset token is invalid or has expired');
+		req.flash('error', 'Токен сброса пароля устарел ли неправилен');
 		return res.redirect('/login');
 	}
-	res.render('reset', { title: 'Reset your password'})
+	res.render('reset', { title: 'Сброс вашего пароля'})
 }
 
 exports.confirmedPasswords = (req, res, next) => {
@@ -64,7 +64,7 @@ exports.confirmedPasswords = (req, res, next) => {
 		next();
 		return;
 	}
-	req.flash('error', 'Passwords do not match!');
+	req.flash('error', 'А пароли-то не совпадают!');
 	res.redirect('back');
 }
 
@@ -74,7 +74,7 @@ exports.update = async (req, res) => {
 		resetPasswordExpires: { $gt: Date.now()}
 	});
 	if(!user) {
-		req.flash('error', 'Password reset token is invalid or has expired');
+		req.flash('error', 'Токен сброса пароля устарел ли неправилен');
 		return res.redirect('/login');
 	}
 
@@ -84,6 +84,6 @@ exports.update = async (req, res) => {
 	user.resetPasswordExpires = undefined;
 	const updatedUser = await user.save();
 	await req.login(updatedUser);
-	req.flash('success', 'Your password has been reset! You are not logged in.');
+	req.flash('success', 'Ваш пароль был сброшен! А еще вы теперь залогинены.');
 	res.redirect('/');
 }

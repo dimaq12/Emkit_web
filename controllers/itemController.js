@@ -40,9 +40,10 @@ exports.addItem = (req, res) => {
 	res.render('editItem', { title: 'Добавить элемент'});
 }
 exports.createItem = async (req, res) => {
-    const item = await (new Item(req.body)).save();
-    req.flash('success', `Элемент ${item.name} создан успешно.`);
-    res.redirect(`/item/${item.slug}`);
+	req.body.author = req.user._id;
+	const item = await (new Item(req.body)).save();
+	req.flash('success', `Элемент ${item.name} создан успешно.`);
+	res.redirect(`/item/${item.slug}`);
 }
 
 exports.getItems = async (req, res) => {
@@ -66,19 +67,24 @@ exports.getItems = async (req, res) => {
     res.render('items', { title: 'Все переходники', items});
 }
 
+const confirmOwner = (item, user) => {
+	if(!item.author.equals(user._id)){
+		throw Error('Вы можете редактировать только свои элементы!');
+	}
+}
+
 exports.editItem = async (req, res) => {
 	const item = await Item.findOne({ _id: req.params.id})
-	// confirmOwner(item, req.user);
-	res.render('editItem', { title: `Edit ${item.name}`, item})
+	confirmOwner(item, req.user);
+	res.render('editItem', { title: `Редактирование ${item.name}`, item})
 }
 
 exports.updateItem = async (req, res) => {
-	// req.body.location.type = 'Point';
 	const item = await Item.findOneAndUpdate({_id: req.params.id}, req.body, {
 		new: true,
 		runValidators: true
 	}).exec();
-	req.flash('success', `Успешно обновили <strong>${item.name}</strong>. <a href="/items/${item.slug}">Просмотреть</a>`);
+	req.flash('success', `Успешно обновили <strong>${item.name}</strong>. <a href="/item/${item.slug}">Просмотреть</a>`);
 	res.redirect(`/items/${item._id}/edit`);
 }
 
@@ -98,4 +104,17 @@ exports.getItemsByCategory = async (req, res) => {
 	const itemsPromise = Item.find({ categories: categoryQuery });
 	const [categories, items] = await Promise.all([categoriesPromise, itemsPromise]);
 	res.render('category', {categories, title: 'Категории', category, items});
+}
+
+exports.searchItems = async (req, res) => {
+	const items = await Item.find({
+		$text: {
+			$search: req.query.q
+		}
+	}, {
+		score: { $meta: 'textScore'}
+	}).sort({
+		score: { $meta: 'textScore'}
+	}).limit(5)
+	res.json(items)
 }

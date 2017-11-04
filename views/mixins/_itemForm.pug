@@ -8,7 +8,7 @@ mixin itemForm(item = {})
 			input(type='file' name='photo' id='photo' accept='image/gif, image/jpeg, image/png, image/jpg')
 			if item.photo
 				img(src=`/uploads/${item.photo}`, alt=item.name width=200)
-		- const choices = ['Переходники SO', 'Переходники SSOP', 'Переходники для Breadboard', 'QFN Переходники'] 
+		- const choices = ['Переходники SO', 'Переходники SSOP', 'Переходники для Breadboard', 'QFN Переходники', 'Переходники SOT23'] 
 		- const categories = item.categories || []
 		ul.categories
 			each choice in choices

@@ -9,3 +9,4 @@
 - create "category" template
 - implement category filtering logic
 - create login form and controller
+- create logout, forgot form 
