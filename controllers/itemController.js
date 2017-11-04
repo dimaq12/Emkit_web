@@ -81,3 +81,21 @@ exports.updateItem = async (req, res) => {
 	req.flash('success', `Успешно обновили <strong>${item.name}</strong>. <a href="/items/${item.slug}">Просмотреть</a>`);
 	res.redirect(`/items/${item._id}/edit`);
 }
+
+exports.getItemBySlug = async (req, res, next) => {
+	const item = await Item.findOne({ slug: req.params.slug}).populate('author reviews');
+	if(!item){
+		return next();
+	}
+	res.render('item', {item: item, title: item.name});
+}
+
+exports.getItemsByCategory = async (req, res) => {
+	const category = req.params.category;
+	console.log(category);
+	const categoryQuery = category || { $exists: true};
+	const categoriesPromise = Item.getCategoriesList();
+	const itemsPromise = Item.find({ categories: categoryQuery });
+	const [categories, items] = await Promise.all([categoriesPromise, itemsPromise]);
+	res.render('category', {categories, title: 'Категории', category, items});
+}

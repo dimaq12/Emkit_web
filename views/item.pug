@@ -1,0 +1,18 @@
+extends layout
+
+block content
+  .single
+    .single__hero
+      img.single__image(src=`/uploads/${item.photo || 'item.png'}`)
+      h2.title.title--single
+        a(href=`/items/${item.slug}`) #{item.name}
+
+  .single__details.inner
+    p= item.description
+
+    if item.categories
+      ul.categories
+        each category in item.categories
+          li.category
+            a.category__link(href=`/categories/${category}`)
+              span.category__text  ##{category}

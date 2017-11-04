@@ -6,3 +6,6 @@
 - create items.pug template
 - create "itemCard" mixin
 - create "editItem" route in the controller
+- create "category" template
+- implement category filtering logic
+- create login form and controller

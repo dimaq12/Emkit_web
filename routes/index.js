@@ -1,6 +1,8 @@
 const express = require('express');
 const router = express.Router();
 const itemController = require('../controllers/itemController');
+const userController = require('../controllers/userController');
+const authController = require('../controllers/authController');
 const {catchErrors} = require('../handlers/errorHandlers');
 
 // Do work here
@@ -18,5 +20,17 @@ router.post('/add/:id',
   catchErrors(itemController.updateItem
 ));
 router.get('/items/:id/edit', catchErrors(itemController.editItem));
+
+router.get('/item/:slug', catchErrors(itemController.getItemBySlug));
+router.get('/categories/', catchErrors(itemController.getItemsByCategory));
+router.get('/categories/:category', catchErrors(itemController.getItemsByCategory));
+
+router.get('/login', userController.loginForm);
+router.get('/register', userController.registerForm);
+router.post('/register',
+	userController.validateRegister,
+	userController.register,
+	authController.login
+);	
 
 module.exports = router;

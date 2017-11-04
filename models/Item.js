@@ -36,4 +36,12 @@ itemSchema.pre('save', async function(next){
 	next();
 })
 
+itemSchema.statics.getCategoriesList = function(){
+	return this.aggregate([
+		{$unwind: '$categories'},
+		{$group: { _id: '$categories', count: {$sum: 1}}},
+		{$sort: {count: -1 }}
+	])
+}
+
 module.exports = mongoose.model('Item', itemSchema);

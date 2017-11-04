@@ -1,0 +1,16 @@
+extends layout
+
+
+block content
+	.inner
+		form.form(action='/register' method='POST')
+			h2 Регистрация
+			label(for='name') Имя
+			input(type='text' name='name')
+			label(for='email') Email
+			input(type='email' name='email')
+			label(for='password') Пароль
+			input(type='password' name='password')
+			label(for='password-confirm') Подтвердите пароль
+			input(type='password' name='password-confirm')
+			input.button(type='submit' value='Зарегистрироваться')
