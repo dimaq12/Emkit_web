@@ -9,7 +9,8 @@
     "categories": [
       "QFN Переходники"
     ],
-    "created": "2017-03-08T17:04:19.860Z"
+    "created": "2017-03-08T17:04:19.860Z",
+    "buylink": "https://shop.emkit.net/adapter-boards/qfn-adapters/qfn-12-dip"
   },
   {
     "_id": "58c039ee8060197ca0b52d4e",
@@ -21,7 +22,8 @@
     "categories": [
       "Переходники SSOP"
     ],
-    "created": "2017-03-08T17:05:50.134Z"
+    "created": "2017-03-08T17:05:50.134Z",
+    "buylink": "https://shop.emkit.net/adapter-boards/ssop-adapters/ssop28-dip"
   },
   {
     "_id": "58c03a428060197ca0b52d4f",
@@ -33,7 +35,8 @@
     "categories": [
       "Переходники SOT23"
     ],
-    "created": "2017-03-08T17:07:14.681Z"
+    "created": "2017-03-08T17:07:14.681Z",
+    "buylink": "https://shop.emkit.net/adapter-boards/sot23-adapters/sot23-6-dip"
   },
   {
     "_id": "59fe4282cb722a1b1c500380",
@@ -45,7 +48,8 @@
     "categories": [
       "QFP Переходники"
     ],
-    "created": "2017-03-08T17:07:14.681Z"
+    "created": "2017-03-08T17:07:14.681Z",
+    "buylink": "https://shop.emkit.net/adapter-boards/qfp-adapters/qfp-100-dip"
   },
   {
     "_id": "59fe43fbe6c236079cdf0405",
@@ -57,7 +61,8 @@
     "categories": [
       "QFN Переходники"
     ],
-    "created": "2017-03-08T17:07:14.681Z"
+    "created": "2017-03-08T17:07:14.681Z",
+    "buylink": "https://shop.emkit.net/qfn-16-dip"
   },
   {
     "_id": "59fe45079ed1732308963f32",
@@ -69,7 +74,8 @@
     "categories": [
       "QFN Переходники"
     ],
-    "created": "2017-02-08T17:07:14.681Z"
+    "created": "2017-02-08T17:07:14.681Z",
+    "buylink": "https://shop.emkit.net/qfn-24-dip"
   },
   {
     "_id": "59fe45d6f6c9a930984dcf33",
@@ -81,6 +87,7 @@
     "categories": [
       "QFN Переходники"
     ],
-    "created": "2017-02-08T17:07:14.681Z"
+    "created": "2017-02-08T17:07:14.681Z",
+    "buylink": "https://shop.emkit.net/qfn-28-dip"
   }
 ]

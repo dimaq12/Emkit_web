@@ -23,7 +23,8 @@ const itemSchema = new mongoose.Schema({
 		type: mongoose.Schema.ObjectId,
 		ref: 'Item',
 		required: 'Вы должны добавить автора!'
-	}
+	},
+	buylink: String
 	
 });
 

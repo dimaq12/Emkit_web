@@ -22,4 +22,6 @@ mixin itemCard(item = {})
 				a(href=`/item/${item.slug}`) #{item.name}
 		.item__details
 			p= item.description.split(' ').slice(0, 25).join(' ')
+		.item__cta
+			a.button-pulse(href=`${item.buylink}`) КУПИТЬ
 
