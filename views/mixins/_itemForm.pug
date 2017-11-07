@@ -4,6 +4,8 @@ mixin itemForm(item = {})
 		input(type='text' name='name' value=item.name)
 		label(for='description') Описание
 		textarea(name='description')= item.description
+		label(for='buylink') Ссылка где купить
+		input(type='text' name='buylink' value=item.buylink)
 		label(for='photo') Фото
 			input(type='file' name='photo' id='photo' accept='image/gif, image/jpeg, image/png, image/jpg')
 			if item.photo

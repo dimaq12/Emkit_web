@@ -89,5 +89,18 @@
     ],
     "created": "2017-02-08T17:07:14.681Z",
     "buylink": "https://shop.emkit.net/qfn-28-dip"
+  },
+  {
+    "_id": "5a021c74d0643700f0d43c6d",
+    "slug": "-qfn-20--dip",
+    "name": "Переходник QFN-20 / DIP",
+    "description": "Переходник предназначен для макетирования микросхем в корпусах QFN-20. С одной стороны платы посадочное место по корпус QFN-20 с шагом 0,65 мм. Со второй стороны – с шагом 0,5 мм.",
+    "author": "58c039018060197ca0b52d4c",
+    "photo": "faa5a615-a5eb-449b-94a1-669a69b75ac0.jpeg",
+    "categories": [
+      "QFN Переходники"
+    ],
+    "created": "2017-02-08T17:07:14.681Z",
+    "buylink": "https://shop.emkit.net/adapter-boards/qfn-adapters/qfn-20-dip"
   }
 ]
