@@ -11,6 +11,7 @@ block content
 				a(href=`/items/${item.slug}`) #{item.name}
 
 	.single__details.inner
+		img.main__image(src=`/uploads/${item.photo || 'item.png'}`)
 		p= item.description
 
 		if item.categories
@@ -19,10 +20,12 @@ block content
 					li.category
 						a.category__link(href=`/categories/${category}`)
 							span.category__text  ##{category}
-		if user
-			+reviewForm(item)
-		if item.reviews
-			.reviews
-				each r in item.reviews
-					.review
-						+review(r)
+		.item__cta
+			a.button-pulse(href=`${item.buylink}`) КУПИТЬ
+		//- if user
+		//- 	+reviewForm(item)
+		//- if item.reviews
+		//- 	.reviews
+		//- 		each r in item.reviews
+		//- 			.review
+		//- 				+review(r)

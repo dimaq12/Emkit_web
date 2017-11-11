@@ -34,7 +34,7 @@ exports.resize = async (req, res, next) => {
 }
 
 exports.getItems = (req, res) => {
-    res.render("index", { title: 'Переходники'});
+    res.render("index", { title: 'Продукты'});
 }
 exports.addItem = (req, res) => {
 	res.render('editItem', { title: 'Добавить элемент'});
@@ -63,7 +63,7 @@ exports.getItems = async (req, res) => {
 		res.redirect(`/items/page/${pages}`);
 		return;
     }
-	res.render('items', { title: 'Все переходники', items, page, pages});
+	res.render('items', { title: 'Все продукты', items, page, pages});
 }
 
 const confirmOwner = (item, user) => {

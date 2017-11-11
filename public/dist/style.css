@@ -452,7 +452,13 @@ template {
 
 @font-face {
   font-family: 'Roboto Slab';
-  src: url("/fonts/RobotoSlab-Regular.ttf ") format("truetype");
+  src: url("/fonts/RobotoSlab-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'OpenSans';
+  src: url("/fonts/OpenSans-Regular.ttf") format("truetype");
   font-weight: normal;
   font-style: normal; }
 
@@ -946,6 +952,13 @@ label {
   padding: 3rem;
   margin-top: -10rem;
   box-shadow: 0 0 10px 2px rgba(0, 0, 0, 0.15); }
+  .single__details .main__image {
+    display: block;
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+    border: solid 10px #efefef;
+    box-shadow: 2px 2px 16px -2px black; }
 
 .single__map {
   width: calc(100% + 6rem);
@@ -1190,5 +1203,58 @@ pre.error {
   background: white;
   line-height: 3;
   white-space: pre-line; }
+
+.articles h2 {
+  margin-bottom: 20px; }
+
+.articles p {
+  font-family: "OpenSans", sans-serif; }
+
+.articles .main__img {
+  height: auto;
+  display: block;
+  margin: 0 auto;
+  padding: 1.5%;
+  border: none; }
+
+.articles .articles__readmore {
+  border-bottom: 2px solid #ef4d28;
+  color: black;
+  font-style: italic;
+  text-shadow: none;
+  font-weight: 100;
+  background: rgba(255, 196, 14, 0.8);
+  padding: 15px;
+  font-size: 2rem;
+  display: block;
+  text-align: center; }
+
+.articles ul {
+  font-family: "OpenSans", sans-serif;
+  list-style: none; }
+
+.articles ul li {
+  list-style: square inside;
+  line-height: 2;
+  font-size: 1.6rem; }
+
+.articles h3 {
+  font-size: 4rem;
+  margin-bottom: 15px;
+  margin-top: 30px; }
+
+.articles .article-link {
+  border-bottom: 2px solid #ecd018;
+  white-space: nowrap; }
+
+.emp {
+  color: #111;
+  background-color: rgba(0, 0, 0, 0.05);
+  font-weight: 600;
+  font-family: Consolas;
+  border: 1px solid #f4f4f4;
+  margin: 0 2px 0 2px;
+  padding: 0 4px 0 4px;
+  border-radius: 2px; }
 
 /*# sourceMappingURL=style.css.map*/

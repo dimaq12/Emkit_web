@@ -18,8 +18,9 @@ exports.icon = (name) => fs.readFileSync(`./public/images/icons/${name}.svg`);
 exports.siteName = `EmKit - Электронные компоненты для инженеров`;
 
 exports.menu = [
-  { slug: '/items', title: 'Переходники', icon: 'item', },
+  { slug: '/items', title: 'Продукты', icon: 'item', },
   { slug: '/categories', title: 'Категории', icon: 'tag', },
   { slug: '/top', title: 'Топ', icon: 'top', },
+  { slug: '/articles', title: 'Статьи', icon: 'article', },
   { slug: '/add', title: 'Добавить', icon: 'add', },
 ];

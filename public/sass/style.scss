@@ -16,3 +16,15 @@
 @import 'partials/pagination';
 @import 'partials/map';
 @import 'partials/helpers';
+@import 'partials/articles';
+
+.emp {
+  color: #111;
+  background-color: rgba(0, 0, 0, 0.05);
+  font-weight: 600;
+  font-family: Consolas;
+  border: 1px solid #f4f4f4;
+  margin: 0 2px 0 2px;
+  padding: 0 4px 0 4px;
+  border-radius: 2px;
+}

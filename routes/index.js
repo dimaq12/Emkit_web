@@ -3,6 +3,7 @@ const router = express.Router();
 const itemController = require('../controllers/itemController');
 const userController = require('../controllers/userController');
 const authController = require('../controllers/authController');
+const articlesController = require('../controllers/articlesController');
 const reviewController = require('../controllers/reviewController');
 const {catchErrors} = require('../handlers/errorHandlers');
 
@@ -31,17 +32,21 @@ router.get('/categories/:category', catchErrors(itemController.getItemsByCategor
 router.get('/login', userController.loginForm);
 router.get('/logout', authController.logout);
 router.post('/login', authController.login);
-router.get('/register', userController.registerForm);
-router.post('/register',
-	userController.validateRegister,
-	userController.register,
-	authController.login
-);	
+// router.get('/register', userController.registerForm);
+// router.post('/register',
+// 	userController.validateRegister,
+// 	userController.register,
+// 	authController.login
+// );	
+
+// Articles
+router.get('/articles', catchErrors(articlesController.showAllArticles));
+router.get('/articles/balancer-assembly', catchErrors(articlesController.balancerAssembly));
 
 // User account
 router.get('/account', authController.isLoggedIn, userController.account);
 router.post('/account', catchErrors(userController.updateAccount));
-router.post('/account/forgot', catchErrors(authController.forgot));
+// router.post('/account/forgot', catchErrors(authController.forgot));
 
 // API
 router.get('/api/search', catchErrors(itemController.searchItems));
