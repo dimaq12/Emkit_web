@@ -22,5 +22,7 @@ exports.menu = [
   { slug: '/categories', title: 'Категории', icon: 'tag', },
   { slug: '/top', title: 'Топ', icon: 'top', },
   { slug: '/articles', title: 'Статьи', icon: 'article', },
-  { slug: '/add', title: 'Добавить', icon: 'add', },
+  { slug: '/buy', title: 'Купить', icon: 'buy', },
+  { slug: '/contacts', title: 'Контакты', icon: 'contact', },
+  // { slug: '/add', title: 'Добавить', icon: 'add', },
 ];

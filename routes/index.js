@@ -43,6 +43,12 @@ router.post('/login', authController.login);
 router.get('/articles', catchErrors(articlesController.showAllArticles));
 router.get('/articles/balancer-assembly', catchErrors(articlesController.balancerAssembly));
 
+// Buy
+router.get('/buy', catchErrors(itemController.buyItems));
+
+// Contacts
+router.get('/contacts', catchErrors(itemController.contactUs));
+
 // User account
 router.get('/account', authController.isLoggedIn, userController.account);
 router.post('/account', catchErrors(userController.updateAccount));

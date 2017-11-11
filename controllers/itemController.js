@@ -141,3 +141,11 @@ exports.getTopItems = async (req, res) => {
 	res.render('topItems', { items, title:'Топ'})
 }
 
+exports.buyItems = async (req, res) => {
+	res.render('buyItems', { title: 'Купить'})
+}
+
+exports.contactUs = async (req, res) => {
+	res.render('contact', { title: 'Контакты'})
+}
+

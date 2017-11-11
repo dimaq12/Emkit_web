@@ -6,89 +6,96 @@
     "description": "Переходник предназначен для макетирования микросхем в корпусах QFN-12. С одной стороны платы посадочное место под корпус QFN-12 с шагом 0,8 мм. Со второй стороны – с шагом 0,5 мм.",
     "author": "58c039018060197ca0b52d4c",
     "photo": "52b56dbf-ea39-4dbd-ac12-f9f574d890ee.jpeg",
-    "categories": [
-      "QFN Переходники"
-    ],
+    "buylink": "https://shop.emkit.net/adapter-boards/qfn-adapters/qfn-12-dip",
     "created": "2017-03-08T17:04:19.860Z",
-    "buylink": "https://shop.emkit.net/adapter-boards/qfn-adapters/qfn-12-dip"
+    "categories": [
+      "Переходники для Breadboard",
+      "QFN Переходники"
+    ]
   },
   {
     "_id": "58c039ee8060197ca0b52d4e",
     "slug": "-ssop28--dip28",
     "name": "Переходник SSOP28 / DIP28",
-    "description": "Переходник предназначен для макетирования микросхем в корпусах SSOP28. Все выводы пронумерованы, что значительно облегчает монтаж и проверку схемы. Предусмотрена возможность отвода тепла через дно корпуса, что позволяет макетировать схемы с применением мощных микросхем, требующих наличия радиатора на печатной плате. ",
+    "description": "Переходник предназначен для макетирования микросхем в корпусах SSOP28. Все выводы пронумерованы, что значительно облегчает монтаж и проверку схемы. Предусмотрена возможность отвода тепла через дно корпуса, что позволяет макетировать схемы с применением мощных микросхем, требующих наличия радиатора на печатной плате.",
     "author": "58c039018060197ca0b52d4c",
     "photo": "13228b6c-83e9-461b-b952-5eceeb3218cf.jpeg",
-    "categories": [
-      "Переходники SSOP"
-    ],
+    "buylink": "https://shop.emkit.net/adapter-boards/ssop-adapters/ssop28-dip",
     "created": "2017-03-08T17:05:50.134Z",
-    "buylink": "https://shop.emkit.net/adapter-boards/ssop-adapters/ssop28-dip"
+    "categories": [
+      "Переходники SSOP",
+      "Переходники для Breadboard"
+    ]
   },
   {
     "_id": "58c03a428060197ca0b52d4f",
+    "__v": 0,
     "slug": "-sot23-6--dip",
     "name": "Переходник SOT23-6 / DIP",
     "description": "Переходник предназначен для макетирования микросхем в корпусах SOT23-6 или двух транзисторов в корпусе SOT23.",
-    "author": "58c03ada8060197ca0b52d52",
+    "author": "58c039018060197ca0b52d4c",
     "photo": "1416e075-dd5f-43d7-933a-d9ae2336db93.jpeg",
-    "categories": [
-      "Переходники SOT23"
-    ],
+    "buylink": "https://shop.emkit.net/adapter-boards/sot23-adapters/sot23-6-dip",
     "created": "2017-03-08T17:07:14.681Z",
-    "buylink": "https://shop.emkit.net/adapter-boards/sot23-adapters/sot23-6-dip"
+    "categories": [
+      "Переходники для Breadboard",
+      "Переходники SOT23"
+    ]
   },
   {
     "_id": "59fe4282cb722a1b1c500380",
     "slug": "-qfp100--dip",
     "name": "Переходник QFP100 / DIP",
     "description": "Переходник предназначен для макетирования микросхем в корпусах LQFP100 и TQFP100. Габаритные размеры платы составляют 47×47 мм.",
-    "author": "58c03ada8060197ca0b52d52",
+    "author": "58c039018060197ca0b52d4c",
     "photo": "a15265cf-a51b-40c7-9f4f-dea7aa7dc896.jpeg",
+    "buylink": "https://shop.emkit.net/adapter-boards/qfp-adapters/qfp-100-dip",
+    "created": "2017-03-08T17:07:14.681Z",
     "categories": [
       "QFP Переходники"
-    ],
-    "created": "2017-03-08T17:07:14.681Z",
-    "buylink": "https://shop.emkit.net/adapter-boards/qfp-adapters/qfp-100-dip"
+    ]
   },
   {
     "_id": "59fe43fbe6c236079cdf0405",
     "slug": "-qfn-16--dip",
     "name": "Переходник QFN-16 / DIP",
     "description": "Переходник предназначен для макетирования микросхем в корпусах QFN-16. С одной стороны платы посадочное место по корпус QFN-16 с шагом 0,65 мм. Со второй стороны – с шагом 0,5 мм.",
-    "author": "58c03ada8060197ca0b52d52",
+    "author": "58c039018060197ca0b52d4c",
     "photo": "4efcf5f9-f5f4-45a3-aeb9-79e280349519.jpeg",
-    "categories": [
-      "QFN Переходники"
-    ],
+    "buylink": "https://shop.emkit.net/qfn-16-dip",
     "created": "2017-03-08T17:07:14.681Z",
-    "buylink": "https://shop.emkit.net/qfn-16-dip"
+    "categories": [
+      "Переходники для Breadboard",
+      "QFN Переходники"
+    ]
   },
   {
     "_id": "59fe45079ed1732308963f32",
     "slug": "-qfn-24--dip",
     "name": "Переходник QFN-24 / DIP",
     "description": "Переходник предназначен для макетирования микросхем в корпусах QFN-24. С одной стороны платы посадочное место под корпус QFN-24 с шагом 0,65 мм. Со второй стороны – с шагом 0,5 мм.",
-    "author": "58c03ada8060197ca0b52d52",
+    "author": "58c039018060197ca0b52d4c",
     "photo": "7b8d9942-55c2-4c17-8c52-8dc34b4158dd.jpeg",
-    "categories": [
-      "QFN Переходники"
-    ],
+    "buylink": "https://shop.emkit.net/qfn-24-dip",
     "created": "2017-02-08T17:07:14.681Z",
-    "buylink": "https://shop.emkit.net/qfn-24-dip"
+    "categories": [
+      "Переходники для Breadboard",
+      "QFN Переходники"
+    ]
   },
   {
     "_id": "59fe45d6f6c9a930984dcf33",
     "slug": "-qfn-28--dip",
     "name": "Переходник QFN-28 / DIP",
     "description": "Переходник предназначен для макетирования микросхем в корпусах QFN-28. С одной стороны платы посадочное место под корпус QFN-28 с шагом 0,5 мм. Со второй стороны – с шагом 0,4 мм.",
-    "author": "58c03ada8060197ca0b52d52",
+    "author": "58c039018060197ca0b52d4c",
     "photo": "a13f55df-4c13-45f0-958b-e1778d142699.jpeg",
-    "categories": [
-      "QFN Переходники"
-    ],
+    "buylink": "https://shop.emkit.net/qfn-28-dip",
     "created": "2017-02-08T17:07:14.681Z",
-    "buylink": "https://shop.emkit.net/qfn-28-dip"
+    "categories": [
+      "Переходники для Breadboard",
+      "QFN Переходники"
+    ]
   },
   {
     "_id": "5a021c74d0643700f0d43c6d",
@@ -97,10 +104,199 @@
     "description": "Переходник предназначен для макетирования микросхем в корпусах QFN-20. С одной стороны платы посадочное место по корпус QFN-20 с шагом 0,65 мм. Со второй стороны – с шагом 0,5 мм.",
     "author": "58c039018060197ca0b52d4c",
     "photo": "faa5a615-a5eb-449b-94a1-669a69b75ac0.jpeg",
+    "buylink": "https://shop.emkit.net/adapter-boards/qfn-adapters/qfn-20-dip",
+    "created": "2017-02-08T17:07:14.681Z",
     "categories": [
+      "Переходники для Breadboard",
+      "QFN Переходники"
+    ]
+  },
+  {
+    "_id": "5a07315e10b28a21c42b8076",
+    "slug": "balancer",
+    "name": "Балансир",
+    "description": "Балансир предназначен для шунтирования ячеек литиевой АкБ во время заряда. Т.е. при превышении на ячейке порогового напряжения, на балансире открывается транзистор и ток начинает течь через балансир. За счёт этого напряжение на ячейке не превышает допустимую величину.",
+    "buylink": "/articles/balancer-assembly",
+    "photo": "6537928c-fee0-464c-8fb5-508c6469125c.jpeg",
+    "author": "58c039018060197ca0b52d4c",
+    "created": "2017-11-11T17:20:30.782Z",
+    "categories": "Балансиры"
+  },
+  {
+    "_id": "5a073503f9cd5405dcd0225a",
+    "slug": "-qfn-36--dip",
+    "name": "Переходник QFN-36 / DIP",
+    "description": "Переходник предназначен для макетирования микросхем в корпусах QFN-36. С одной стороны платы посадочное место под корпус QFN-36 с шагом 0,5 мм. Со второй стороны – тоже с шагом 0,5 мм, но под прямоугольный корпус.",
+    "buylink": "https://shop.emkit.net/adapter-boards/qfn-adapters/qfn-36-dip",
+    "author": "58c039018060197ca0b52d4c",
+    "created": "2017-11-11T17:36:03.584Z",
+    "categories": [
+      "Переходники для Breadboard",
       "QFN Переходники"
     ],
-    "created": "2017-02-08T17:07:14.681Z",
-    "buylink": "https://shop.emkit.net/adapter-boards/qfn-adapters/qfn-20-dip"
+    "photo": "07378986-1b69-4259-b453-ff7a9cc48df7.jpeg"
+  },
+  {
+    "_id": "5a07395adc792b1c28647dd1",
+    "slug": "-qfn-40--dip",
+    "name": "Переходник QFN-40 / DIP",
+    "description": "Переходник предназначен для макетирования микросхем в корпусах QFN-40. С одной стороны платы посадочное место по корпус QFN-40 с шагом 0,5 мм. Со второй стороны – с шагом 0,4 мм.",
+    "buylink": "https://shop.emkit.net/adapter-boards/qfn-adapters/qfn-40-dip",
+    "photo": "0a55fdb1-f971-4c56-b0ac-46211d828ec5.jpeg",
+    "author": "58c039018060197ca0b52d4c",
+    "created": "2017-11-11T17:54:34.501Z",
+    "categories": [
+      "Переходники для Breadboard",
+      "QFN Переходники"
+    ]
+  },
+  {
+    "_id": "5a073a2ddc792b1c28647dd2",
+    "slug": "-qfp32--qfn32--dip",
+    "name": "Переходник QFP32 / QFN32 / DIP",
+    "description": "Переходник предназначен для макетирования микросхем в корпусах TQFP32, LQFP32 и QFN32.\r\n\r\nГабаритные размеры платы составляют 25×25 мм.",
+    "buylink": "https://shop.emkit.net/adapter-boards/qfn-adapters/qfp-qfn32-dip",
+    "photo": "f488d416-491f-4385-9c7f-48785ce11ad9.jpeg",
+    "author": "58c039018060197ca0b52d4c",
+    "created": "2017-11-11T17:58:05.188Z",
+    "categories": [
+      "QFN Переходники",
+      "QFP Переходники"
+    ]
+  },
+  {
+    "_id": "5a073ab8dc792b1c28647dd3",
+    "slug": "-qfp44--qfn44--dip",
+    "name": "Переходник QFP44 / QFN44 / DIP",
+    "description": "Переходник предназначен для макетирования микросхем в корпусах TQFP44, LQFP44 и QFN44. Габаритные размеры платы составляют 29×29 мм.",
+    "buylink": "https://shop.emkit.net/adapter-boards/qfn-adapters/qfp-qfn44-dip",
+    "photo": "fa7fe8e4-b601-4185-897d-ddbdd248e771.jpeg",
+    "author": "58c039018060197ca0b52d4c",
+    "created": "2017-11-11T18:00:24.811Z",
+    "categories": [
+      "QFN Переходники",
+      "QFP Переходники"
+    ]
+  },
+  {
+    "_id": "5a073affdc792b1c28647dd4",
+    "slug": "-qfp48--qfn48--dip",
+    "name": "Переходник QFP48 / QFN48 / DIP",
+    "description": "Переходник предназначен для макетирования микросхем в корпусах TQFP48, LQFP48 и QFN48.",
+    "buylink": "https://shop.emkit.net/adapter-boards/qfn-adapters/qfp-qfn48-dip",
+    "photo": "b8be55a3-1ef8-44de-9d71-a2fffefe27d7.jpeg",
+    "author": "58c039018060197ca0b52d4c",
+    "created": "2017-11-11T18:01:35.526Z",
+    "categories": [
+      "QFN Переходники",
+      "QFP Переходники"
+    ]
+  },
+  {
+    "_id": "5a073b37dc792b1c28647dd5",
+    "slug": "-qfp52--qfn52--dip",
+    "name": "Переходник QFP52 / QFN52 / DIP",
+    "description": "Переходник предназначен для макетирования микросхем в корпусах TQFP52, LQFP52 и QFN52.",
+    "buylink": "https://shop.emkit.net/adapter-boards/qfn-adapters/qfp-qfn52-dip",
+    "photo": "2f2e2cb2-0e27-4b5a-ac87-87f70bdd26e0.jpeg",
+    "author": "58c039018060197ca0b52d4c",
+    "created": "2017-11-11T18:02:31.429Z",
+    "categories": [
+      "QFN Переходники",
+      "QFP Переходники"
+    ]
+  },
+  {
+    "_id": "5a073b5fdc792b1c28647dd6",
+    "slug": "-qfp56--qfn56--dip",
+    "name": "Переходник QFP56 / QFN56 / DIP",
+    "description": "Переходник предназначен для макетирования микросхем в корпусах TQFP56, LQFP56 и QFN56",
+    "buylink": "https://shop.emkit.net/adapter-boards/qfn-adapters/qfp-qfn56-dip",
+    "photo": "f166883e-1fa4-4289-b563-b6db2cc31d8f.jpeg",
+    "author": "58c039018060197ca0b52d4c",
+    "created": "2017-11-11T18:03:11.372Z",
+    "categories": [
+      "QFN Переходники",
+      "QFP Переходники"
+    ]
+  },
+  {
+    "_id": "5a073bcbdc792b1c28647dd7",
+    "slug": "-qfp144--dip",
+    "name": "Переходник QFP144 / DIP",
+    "description": "Переходник предназначен для макетирования микросхем в корпусах LQFP144 и TQFP144. Габаритные размеры платы составляют 52×52 мм.",
+    "buylink": "https://shop.emkit.net/adapter-boards/qfp-adapters/qfp-144-dip",
+    "author": "58c039018060197ca0b52d4c",
+    "created": "2017-11-11T18:04:59.123Z",
+    "categories": "QFP Переходники",
+    "photo": "d8d2757e-2719-443a-a590-1159ce0fe3f4.jpeg"
+  },
+  {
+    "_id": "5a073ccfdc792b1c28647dd8",
+    "slug": "-qfp64-0-65-mm--qfp64-0-4-mm--dip",
+    "name": "Переходник QFP64 0.65 mm / QFP64 0.4 mm / DIP",
+    "description": "Переходник предназначен для макетирования микросхем в корпусах TQFP64 и LQFP64 с шагом между выводами 0.65 мм или 0.4 мм. Габаритные размеры платы составляют 33×33 мм.",
+    "buylink": "https://shop.emkit.net/adapter-boards/qfp-adapters/qfp64-dip",
+    "photo": "96003f8b-f83b-443b-82c8-cef4b63fa918.jpeg",
+    "author": "58c039018060197ca0b52d4c",
+    "created": "2017-11-11T18:09:19.858Z",
+    "categories": [
+      "QFP Переходники"
+    ]
+  },
+  {
+    "_id": "5a073d42dc792b1c28647dd9",
+    "slug": "-qfp64-0-8-mm--qfp64-0-5-mm--dip",
+    "name": "Переходник QFP64 0.8 mm / QFP64 0.5 mm / DIP",
+    "description": "Переходник предназначен для макетирования микросхем в корпусах TQFP64 и LQFP64 с шагом между выводами 0.8 мм или 0.5 мм. Габаритные размеры платы составляют 33×33 мм.",
+    "buylink": "https://shop.emkit.net/adapter-boards/qfp-adapters/qfp-64-dip",
+    "photo": "440e2529-9740-4421-8943-ed4ac3855031.jpeg",
+    "author": "58c039018060197ca0b52d4c",
+    "created": "2017-11-11T18:11:14.186Z",
+    "categories": [
+      "QFP Переходники"
+    ]
+  },
+  {
+    "_id": "5a073f70dc792b1c28647dda",
+    "slug": "-so28--dip28",
+    "name": "Переходник SO28 / DIP28",
+    "description": "Переходник предназначен для макетирования микросхем в корпусе SO28. Все выводы пронумерованы, что значительно облегчает монтаж и проверку схемы. Предусмотрена возможность отвода тепла через дно корпуса микросхемы.",
+    "buylink": "https://shop.emkit.net/adapter-boards/so-adapters/so28-dip",
+    "photo": "4376333f-3e05-4831-9a2e-07c8509f89c9.jpeg",
+    "author": "58c039018060197ca0b52d4c",
+    "created": "2017-11-11T18:20:32.507Z",
+    "categories": [
+      "Переходники для Breadboard",
+      "Платы-переходники SO"
+    ]
+  },
+  {
+    "_id": "5a073fbedc792b1c28647ddb",
+    "slug": "-so8--dip8",
+    "name": "Переходник SO8 / DIP8",
+    "description": "Переходник предназначен для макетирования микросхем в корпусе SO8. Этот переходник также поможет вам сэкономить деньги, так как большинство микросхем в корпусе SO8 стоят ощутимо дешевле аналогичных в корпусе DIP8.",
+    "buylink": "https://shop.emkit.net/adapter-boards/so-adapters/so8-dip",
+    "photo": "730453aa-c01c-4d86-b156-681ba78d654e.jpeg",
+    "author": "58c039018060197ca0b52d4c",
+    "created": "2017-11-11T18:21:50.113Z",
+    "categories": [
+      "Переходники для Breadboard",
+      "Платы-переходники SO"
+    ]
+  },
+  {
+    "_id": "5a07400fdc792b1c28647ddc",
+    "slug": "-sot23-8",
+    "name": "Переходник SOT23-8",
+    "description": "Переходник предназначен для макетирования микросхем в корпусах SOT23-8.",
+    "buylink": "https://shop.emkit.net/adapter-boards/sot23-adapters/sot23-8-dip",
+    "photo": "5314b270-08c6-419d-8053-d47caaebe2c1.jpeg",
+    "author": "58c039018060197ca0b52d4c",
+    "created": "2017-11-11T18:23:11.948Z",
+    "categories": [
+      "Переходники для Breadboard",
+      "Переходники SOT23"
+    ]
   }
 ]
