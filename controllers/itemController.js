@@ -33,6 +33,10 @@ exports.resize = async (req, res, next) => {
 	next();
 }
 
+exports.getMainCategories = (req, res) => {
+	res.render('mainCategories', { title: 'Выбор категорий товаров'});
+}
+
 exports.getItems = (req, res) => {
     res.render("index", { title: 'Продукты'});
 }

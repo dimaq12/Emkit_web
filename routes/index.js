@@ -8,7 +8,8 @@ const reviewController = require('../controllers/reviewController');
 const {catchErrors} = require('../handlers/errorHandlers');
 
 // Do work here
-router.get('/', catchErrors(itemController.getItems));
+// router.get('/', catchErrors(itemController.getItems));
+router.get('/', catchErrors(itemController.getMainCategories));
 router.get('/items', catchErrors(itemController.getItems));
 router.get('/items/page/:page', catchErrors(itemController.getItems));
 router.get('/add', authController.isLoggedIn, itemController.addItem);
