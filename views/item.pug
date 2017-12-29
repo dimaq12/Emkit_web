@@ -8,7 +8,7 @@ block content
 		.single__hero
 			img.single__image(src=`/uploads/${item.photo || 'item.png'}`)
 			h2.title.title--single
-				a(href=`/items/${item.slug}`) #{item.name}
+				span #{item.name}
 
 	.single__details.inner
 		img.main__image(src=`/uploads/${item.photo || 'item.png'}`)

@@ -24,6 +24,11 @@
       z-index: 1;
       clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2vw), 0% 100%);
     }
+    span {
+      border-bottom: 0;
+      $yellowa: rgba($yellow,0.8);
+      background-image: linear-gradient(to right, $yellowa 100%, $yellowa 50%);
+    }
   }
   &__image {
     width: 100%;

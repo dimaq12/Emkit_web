@@ -988,6 +988,9 @@ label {
     z-index: 1;
     -webkit-clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2vw), 0% 100%);
             clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2vw), 0% 100%); }
+  .single__hero span {
+    border-bottom: 0;
+    background-image: linear-gradient(to right, rgba(255, 196, 14, 0.8) 100%, rgba(255, 196, 14, 0.8) 50%); }
 
 .single__image {
   width: 100%;
