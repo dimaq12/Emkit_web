@@ -1275,6 +1275,10 @@ pre.error {
   font-style: italic;
   margin-bottom: 15px; }
 
+.articles .spacer {
+  margin: auto;
+  height: 4em; }
+
 .emp {
   color: #111;
   background-color: rgba(0, 0, 0, 0.05);
