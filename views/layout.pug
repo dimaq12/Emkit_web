@@ -18,10 +18,10 @@ html
                 a.nav__link(href=item.slug, class=(currentPath.startsWith(item.slug) ? 'nav__link--active' : ''))
                   != h.icon(item.icon)
                   span #{item.title}
-          .nav__section.nav__section--search
-            .search
-              input.search__input(type="text" placeholder="Переходник, адаптер" name="search")
-              .search__results
+          //- .nav__section.nav__section--search
+          //-   .search
+          //-     input.search__input(type="text" placeholder="Переходник, адаптер" name="search")
+          //-     .search__results
           .nav__section.nav__section--user
             if user
               li.nav__item: a.nav__link(href="/hearts", class=(currentPath.startsWith('/hearts') ? 'nav__link--active' : ''))

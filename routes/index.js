@@ -56,7 +56,7 @@ router.post('/account', catchErrors(userController.updateAccount));
 // router.post('/account/forgot', catchErrors(authController.forgot));
 
 // API
-router.get('/api/search', catchErrors(itemController.searchItems));
+// router.get('/api/search', catchErrors(itemController.searchItems));
 router.post('/api/items/:id/heart', catchErrors(itemController.heartItem));
 
 // Hearts
