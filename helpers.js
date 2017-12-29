@@ -20,7 +20,7 @@ exports.siteName = `EmKit - Электронные компоненты для �
 exports.menu = [
   { slug: '/items', title: 'Продукты', icon: 'item', },
   { slug: '/categories', title: 'Категории', icon: 'tag', },
-  { slug: '/top', title: 'Топ', icon: 'top', },
+  // { slug: '/top', title: 'Топ', icon: 'top', },
   { slug: '/articles', title: 'Статьи', icon: 'article', },
   { slug: '/buy', title: 'Купить', icon: 'buy', },
   { slug: '/contacts', title: 'Контакты', icon: 'contact', },

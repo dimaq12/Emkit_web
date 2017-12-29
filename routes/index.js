@@ -66,6 +66,6 @@ router.get('/hearts', authController.isLoggedIn, catchErrors(itemController.getH
 router.post('/reviews/:id', authController.isLoggedIn, catchErrors(reviewController.addReview));
 
 // TOP
-router.get('/top', catchErrors(itemController.getTopItems));
+// router.get('/top', catchErrors(itemController.getTopItems));
 
 module.exports = router;
