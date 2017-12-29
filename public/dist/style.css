@@ -1001,6 +1001,15 @@ label {
     .single__location {
       margin-right: 0; } }
 
+@media all and (max-width: 650px) {
+  .title--single a {
+    font-size: 5rem;
+    line-height: 1.2; }
+  .single__hero {
+    height: 400px; }
+  .title--single {
+    font-size: 5rem; } }
+
 .heart__button {
   background: none;
   border: 0;
