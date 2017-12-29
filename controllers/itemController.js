@@ -114,11 +114,7 @@ exports.searchItems = async (req, res) => {
 		$text: {
 			$search: req.query.q
 		}
-	}, {
-		score: { $meta: 'textScore'}
-	}).sort({
-		score: { $meta: 'textScore'}
-	}).limit(5)
+	}).limit(10)
 	res.json(items)
 }
 
