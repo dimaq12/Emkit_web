@@ -1,10 +1,16 @@
 @charset "UTF-8";
 html {
-  font-size: 10px; }
+  font-size: 10px;
+  height: 100%;
+  box-sizing: border-box; }
 
 body {
   background: #262161;
-  background: #efefef; }
+  background: #efefef;
+  position: relative;
+  margin: 0;
+  padding-bottom: 8rem;
+  min-height: 100%; }
   body:before {
     content: '';
     display: block;
@@ -24,8 +30,12 @@ body {
 
 footer {
   background: #303030;
-  height: 100px;
-  position: relative; }
+  height: 80px;
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  text-align: center; }
   footer:after {
     position: absolute;
     bottom: 0;
