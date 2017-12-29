@@ -105,13 +105,19 @@
       }
     }
     &__item {
-      width: 33.333333%;
+      width: 20%;
+    }
+    &__item:nth-child(1) {
+      display: none;
     }
     &__link {
       width: 100%;
       svg {
         // width: 5px;
         max-width: 100%;
+      }
+      span {
+        font-size: 12px;
       }
       &--logo {
         svg {

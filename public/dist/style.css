@@ -17,7 +17,15 @@ body {
   margin: 0 auto; }
   @media all and (max-width: 900px) {
     .inner {
-      padding: 2rem; } }
+      padding: 0; } }
+  @media all and (max-width: 650px) {
+    .inner {
+      padding: 5px; } }
+
+@media all and (max-width: 650px) {
+  .inner h2 {
+    margin-top: 5px;
+    margin-bottom: 10px; } }
 
 html {
   box-sizing: border-box; }
@@ -710,11 +718,15 @@ label {
       .nav__section--user svg {
         display: none; }
   .nav__item {
-    width: 33.333333%; }
+    width: 20%; }
+  .nav__item:nth-child(1) {
+    display: none; }
   .nav__link {
     width: 100%; }
     .nav__link svg {
       max-width: 100%; }
+    .nav__link span {
+      font-size: 12px; }
     .nav__link--logo svg {
       width: 100%; }
   .heart-count:before {

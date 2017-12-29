@@ -18,6 +18,17 @@ body {
   max-width:900px;
   margin: 0 auto;
   @media all and (max-width: 900px) {
-    padding: 2rem;
+    padding: 0;
+  }
+  @media all and (max-width: 650px) {
+    padding: 5px;
   }
 }
+
+@media all and (max-width: 650px) {
+  .inner h2 {
+    margin-top: 5px;
+    margin-bottom: 10px;
+  }
+}
+
