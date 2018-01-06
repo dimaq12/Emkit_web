@@ -24,6 +24,7 @@ html
       meta(name="twitter:site" content="@Emkit")
       meta(name="twitter:image" content="https://emkit.net/images/emkit_hero_twitter.png")
       meta(name="twitter:creator" content="@Logvin")
+    
   body
     block header
       header.top
@@ -70,6 +71,9 @@ html
 
     block scripts
       script(src="/dist/App.bundle.js")
+      //- analytics
+      script(async src="https://www.googletagmanager.com/gtag/js?id=UA-112009010-1")
+      script(async src="/javascripts/analytics.js")
     block footer
       footer
         .footer-wrapper
