@@ -4,7 +4,26 @@ html
     title= `${title} | ${h.siteName}`
     link(rel='stylesheet', href='/dist/style.css')
     link(rel="shortcut icon" type="image/png" href="/images/icons/doughnut.png")
+    link(rel="canonical" href="https://emkit.net/")
     meta(name="viewport" content="width=device-width, initial-scale=1")
+    meta(name="author" content="Юрий Логвин")
+    meta(name="description" content="Emkit это место где вы можете купить платы-переходники, драйвера светодиодов, балансиры для литиевых аккумуляторов и другие электронные компоненты")
+    block socialtags
+      //- facebook
+      meta(property="og:title" content="Электронные компоненты и платы-переходники")
+      meta(property="og:image" content="https://emkit.net/images/emkit_hero.png")
+      meta(property="og:site_name" content="Emkit")
+      meta(property="og:description" content="Электронные изделия широкого профиля: Платы-переходники, драйвера светодиодов, балансиры для литиевых аккумуляторов")
+      meta(property="og:locale" content="ru_RU")
+      meta(property="og:type" content="website")
+      meta(property="og:url" content="https://emkit.net/")
+      //- twitter
+      meta(name="twitter:card" content="summary_large_image")
+      meta(name="twitter:description" content="Электронные изделия широкого профиля: Платы-переходники, драйвера светодиодов, балансиры для литиевых аккумуляторов")
+      meta(name="twitter:title" content="Emkit - Электронные Компоненты и Платы-переходники")
+      meta(name="twitter:site" content="@Emkit")
+      meta(name="twitter:image" content="https://emkit.net/images/emkit_hero_twitter.png")
+      meta(name="twitter:creator" content="@Logvin")
   body
     block header
       header.top
